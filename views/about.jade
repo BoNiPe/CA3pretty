@@ -1,0 +1,32 @@
+extends layout
+
+block content
+
+    .jumbotron
+        h1 #{title}
+        p
+            | We are a serious organisation of 3 guys with focus on
+          ul
+          li beautiful design
+          li efficient applications
+          li getting drunk as cheap as possible
+        p
+    p
+    | Current members:
+    p
+    .container
+        //
+             Example row of columns
+        .row
+            .col-md-4
+                h2 Boyko
+                div
+                    img(src='Boyko.jpg', alt='Peter', style='width: 304px; height: 228px;')
+            .col-md-4
+                h2 Nik
+                div
+                    img(src='nik.jpg', alt='Nik', style='width: 304px; height: 228px;')
+            .col-md-4
+                h2 Peter
+                div
+                    img(src='Peter.jpg', alt='Boyko', style='width: 304px; height: 228px;')

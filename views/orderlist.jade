@@ -1,0 +1,20 @@
+extends layout
+
+block content
+
+  div.container
+
+    h1= title
+    p Welcome to #{title}
+    p By the way - If you wanna check the full functionality of our project - Choose order '10262' ;) ...just a suggestion.
+    p p.s. we are using your old database ;)0))0000))0)))0000))00)0)0)))))))))
+    table.table.table-striped.table-hover
+        tbody
+            each val in orders
+                tr
+                    td
+                        a(href = '/detail/'+val._id)
+                            div #{val._id}
+                    td #{val.orderDate}
+                    td #{val.shipName}
+                    td #{val.shipAddress}

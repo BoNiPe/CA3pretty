@@ -1,0 +1,64 @@
+extends layout
+
+block content
+  div.container
+    p Modern New-Age Design Super-Extreme-Mega-Ultra from BoNiPe Organization powered by Haladinma Dafaka v4.0 Powered by Express :PpPppP
+    table(border=1)
+        tbody
+            tr
+                td ID: #{product._id}
+                td
+                td Date: #{product.shippedDate}
+            tr
+                td Required: #{product.requiredDate}
+                td
+                td Shipped: #{product.shipVia}
+            tr
+                td Customer Name:
+                    a(href = '/customer/'+product.customerId)
+                        div #{product.shipName}
+                td
+                td Address: #{product.shipAddress}
+            tr
+                td City: #{product.shipCity}
+                td
+                td Zip: #{product.shipPostalCode}
+            tr
+                td Employee Name:
+                    a(href = '/employee/'+product.employeeId)
+                        div #{employee}
+                td
+                td Country: #{product.shipCountry}
+    br
+    br
+    table(border=1)
+            tr
+                td Product:
+            each val in productName
+                tr
+                    td #{val}
+    br
+    br
+    table(border=1)
+            tr
+                td UnitPrice:
+                td Quantity:
+                td Discount:
+            each val in details
+                tr
+                    td #{val.unitPrice}
+                    td #{val.quantity}
+                    td #{val.discount}
+            tr
+                td Total Price: #{sum}
+    br
+    br
+    table(border=1)
+            tr
+                td Price:
+            each curprice in price
+                tr
+                    td #{curprice}
+    br
+    br
+    button(onclick="history.go(-1)") Back

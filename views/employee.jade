@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  div.container
+
+      table(border=1)
+        tbody
+          tr
+              td ID: #{employee._id}
+              td
+              td Last Name: #{employee.lastName}
+          tr
+              td First Name: #{employee.firstName}
+              td
+              td Title: #{employee.title}
+          tr
+              td Courtesy Title: #{employee.titleOfCourtesy}
+              td
+              td DoB: #{employee.birthDate}
+          tr
+              td Hired: #{employee.hireDate}
+              td
+              td Address: #{employee.address}
+          tr
+              td City : #{employee.city}
+              td
+              td Region: #{employee.region}
+          tr
+              td ZIP : #{employee.postalCode}
+              td
+              td Country : #{employee.country}
+          tr
+              td Home Phone : #{employee.homePhone}
+              td
+              td Extension: #{employee.extension}
+    p Notes : #{employee.notes}
+      br
+    button(onclick="history.go(-1)") Back

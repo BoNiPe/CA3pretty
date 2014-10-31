@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  div.container
+
+      table(border=1)
+        tbody
+          tr
+              td ID: #{customer._id}
+              td
+              td Company Name: #{customer.companyName}
+          tr
+              td Contact Name: #{customer.contactName}
+              td
+              td Contact Title: #{customer.contactTitle}
+          tr
+              td Address: #{customer.address}
+              td
+              td City: #{customer.city}
+          tr
+              td Region: #{customer.region}
+              td
+              td Postal Code: #{customer.postalCode}
+          tr
+              td Country : #{customer.country}
+              td
+              td Phone: #{customer.phone}
+          tr
+              td FAX : #{customer.fax}
+              td
+              td
+    button(onclick="history.go(-1)") Back
